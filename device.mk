@@ -472,8 +472,9 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/realme/porsche/porsche-vendor.mk)
+
+# Camera
+$(call inherit-product-if-exists, vendor/realme/porsche-opluscamera/opluscamera.mk)
